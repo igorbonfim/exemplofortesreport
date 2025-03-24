@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, uRelatorioLivros,
-  uRelatorioAutorCategoriaEditora;
+  uRelatorioAutorCategoriaEditora, Vcl.ExtCtrls, uRelatorioAgrupado;
 
 type
   TFrmPrincipal = class(TForm)
@@ -13,11 +13,16 @@ type
     btnRelAutor: TButton;
     btnRelCategoria: TButton;
     btnRelEditora: TButton;
-    Label1: TLabel;
+    lblRelatorioBasico: TLabel;
+    lblRelatorioAgrupado: TLabel;
+    btnRelatorioAgrupado: TButton;
+    pnlRelatorioBasico: TPanel;
+    pnlRelatorioAgrupado: TPanel;
     procedure btnRelLivrosClick(Sender: TObject);
     procedure btnRelAutorClick(Sender: TObject);
     procedure btnRelCategoriaClick(Sender: TObject);
     procedure btnRelEditoraClick(Sender: TObject);
+    procedure btnRelatorioAgrupadoClick(Sender: TObject);
   private
     procedure GerarRelatorio(sTabela: String);
     { Private declarations }
@@ -31,6 +36,18 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmPrincipal.btnRelatorioAgrupadoClick(Sender: TObject);
+var
+  FrmRelatorioAgrupado: TFrmRelatorioAgrupado;
+begin
+  try
+    FrmRelatorioAgrupado := TFrmRelatorioAgrupado.Create(nil);
+    FrmRelatorioAgrupado.Relatorio.Preview;
+  finally
+    FrmRelatorioAgrupado.Free;
+  end;
+end;
 
 procedure TFrmPrincipal.btnRelAutorClick(Sender: TObject);
 begin

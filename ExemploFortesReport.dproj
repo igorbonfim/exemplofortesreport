@@ -131,8 +131,8 @@
             <Form>FrmRelatorioLivros</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Unit3.pas">
-            <Form>Form3</Form>
+        <DCCReference Include="uRelatorioAgrupado.pas">
+            <Form>FrmRelatorioAgrupado</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="DataModule.pas">
