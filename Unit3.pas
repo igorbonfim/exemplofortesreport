@@ -1,0 +1,34 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, DataModule;
+
+type
+  TForm3 = class(TForm)
+    RLReport1: TRLReport;
+    DataSource1: TDataSource;
+    FDQuery1: TFDQuery;
+    RLBand1: TRLBand;
+    RLBand2: TRLBand;
+    RLLabel1: TRLLabel;
+    RLLabel2: TRLLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+end.
