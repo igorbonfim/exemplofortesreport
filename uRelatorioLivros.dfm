@@ -39,12 +39,12 @@ object FrmRelatorioLivros: TFrmRelatorioLivros
       ParentColor = False
       Transparent = False
       object RLLabel1: TRLLabel
-        Left = 208
+        Left = 217
         Top = 16
-        Width = 302
+        Width = 284
         Height = 37
         Alignment = taCenter
-        Caption = 'Relat'#243'rio de Livros'
+        Caption = 'Rela'#231#227'o de Livros'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = -32

@@ -29,6 +29,7 @@ type
     RLBand6: TRLBand;
     RLDBResult2: TRLDBResult;
     RLLabel3: TRLLabel;
+    RLSystemInfo2: TRLSystemInfo;
     procedure RelatorioBeforePrint(Sender: TObject; var PrintIt: Boolean);
     procedure RelatorioAfterPrint(Sender: TObject);
   private

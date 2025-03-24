@@ -13,11 +13,9 @@ type
     btnRelAutor: TButton;
     btnRelCategoria: TButton;
     btnRelEditora: TButton;
-    lblRelatorioBasico: TLabel;
-    lblRelatorioAgrupado: TLabel;
     btnRelatorioAgrupado: TButton;
-    pnlRelatorioBasico: TPanel;
-    pnlRelatorioAgrupado: TPanel;
+    GroupRelatoriosBasicos: TGroupBox;
+    GroupRelatorioAgrupado: TGroupBox;
     procedure btnRelLivrosClick(Sender: TObject);
     procedure btnRelAutorClick(Sender: TObject);
     procedure btnRelCategoriaClick(Sender: TObject);

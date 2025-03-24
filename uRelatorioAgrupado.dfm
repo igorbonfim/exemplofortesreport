@@ -33,7 +33,7 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
       Left = 38
       Top = 39
       Width = 718
-      Height = 59
+      Height = 69
       BandType = btHeader
       Borders.Sides = sdCustom
       Borders.DrawLeft = True
@@ -44,12 +44,12 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
       ParentColor = False
       Transparent = False
       object RLLabel3: TRLLabel
-        Left = 204
+        Left = 136
         Top = 11
-        Width = 302
+        Width = 438
         Height = 37
         Alignment = taCenter
-        Caption = 'Relat'#243'rio de Livros'
+        Caption = 'Rela'#231#227'o de Livros por Autor'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = -32
@@ -58,21 +58,38 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
         ParentFont = False
         Transparent = False
       end
+      object RLSystemInfo2: TRLSystemInfo
+        Left = 547
+        Top = 47
+        Width = 167
+        Height = 16
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        Info = itNow
+        ParentFont = False
+        Text = 'Gerado em:'
+      end
     end
     object RLBand2: TRLBand
       Left = 38
-      Top = 98
+      Top = 108
       Width = 718
-      Height = 40
+      Height = 29
       BandType = btColumnHeader
       Borders.Sides = sdCustom
       Borders.DrawLeft = True
       Borders.DrawTop = True
       Borders.DrawRight = True
       Borders.DrawBottom = True
+      Color = 15000804
+      ParentColor = False
+      Transparent = False
       object RLLabel1: TRLLabel
         Left = 7
-        Top = 16
+        Top = 7
         Width = 49
         Height = 16
         Caption = 'C'#243'digo'
@@ -82,10 +99,11 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
+        Transparent = False
       end
       object RLLabel2: TRLLabel
         Left = 79
-        Top = 16
+        Top = 7
         Width = 41
         Height = 16
         Caption = 'Nome'
@@ -95,11 +113,12 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
+        Transparent = False
       end
     end
     object RLGroup1: TRLGroup
       Left = 38
-      Top = 138
+      Top = 137
       Width = 718
       Height = 104
       DataFields = 'AUTOR'
@@ -107,16 +126,19 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
         Left = 0
         Top = 0
         Width = 718
-        Height = 32
+        Height = 25
         BandType = btColumnHeader
         Borders.Sides = sdCustom
-        Borders.DrawLeft = True
+        Borders.DrawLeft = False
         Borders.DrawTop = False
-        Borders.DrawRight = True
+        Borders.DrawRight = False
         Borders.DrawBottom = False
+        Color = 8454143
+        ParentColor = False
+        Transparent = False
         object RLDBText1: TRLDBText
           Left = 7
-          Top = 13
+          Top = 7
           Width = 91
           Height = 16
           DataField = 'AUTOR'
@@ -128,17 +150,18 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
           Font.Style = [fsBold]
           ParentFont = False
           Text = 'Autor: '
+          Transparent = False
         end
       end
       object RLBand4: TRLBand
         Left = 0
-        Top = 32
+        Top = 25
         Width = 718
         Height = 33
         Borders.Sides = sdCustom
-        Borders.DrawLeft = True
+        Borders.DrawLeft = False
         Borders.DrawTop = False
-        Borders.DrawRight = True
+        Borders.DrawRight = False
         Borders.DrawBottom = False
         object RLDBText2: TRLDBText
           Left = 7
@@ -161,15 +184,15 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
       end
       object RLBand5: TRLBand
         Left = 0
-        Top = 65
+        Top = 58
         Width = 718
         Height = 32
         BandType = btSummary
         Borders.Sides = sdCustom
-        Borders.DrawLeft = True
+        Borders.DrawLeft = False
         Borders.DrawTop = True
-        Borders.DrawRight = True
-        Borders.DrawBottom = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
         object RLDBResult1: TRLDBResult
           Left = 626
           Top = 13
@@ -191,7 +214,7 @@ object FrmRelatorioAgrupado: TFrmRelatorioAgrupado
     end
     object RLBand6: TRLBand
       Left = 38
-      Top = 242
+      Top = 241
       Width = 718
       Height = 24
       BandType = btSummary
