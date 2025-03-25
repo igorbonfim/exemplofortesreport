@@ -6,7 +6,8 @@ uses
   uRelatorioLivros in 'uRelatorioLivros.pas' {FrmRelatorioLivros},
   uRelatorioAgrupado in 'uRelatorioAgrupado.pas' {FrmRelatorioAgrupado},
   DataModule in 'DataModule.pas' {Data: TDataModule},
-  uRelatorioAutorCategoriaEditora in 'uRelatorioAutorCategoriaEditora.pas' {FrmRelatorioAutorCategoriaEditora};
+  uRelatorioAutorCategoriaEditora in 'uRelatorioAutorCategoriaEditora.pas' {FrmRelatorioAutorCategoriaEditora},
+  uRelatorioParametros in 'uRelatorioParametros.pas' {FrmRelatorioParametros};
 
 {$R *.res}
 
@@ -18,5 +19,6 @@ begin
   Application.CreateForm(TFrmRelatorioAgrupado, FrmRelatorioAgrupado);
   Application.CreateForm(TData, Data);
   Application.CreateForm(TFrmRelatorioAutorCategoriaEditora, FrmRelatorioAutorCategoriaEditora);
+  Application.CreateForm(TFrmRelatorioParametros, FrmRelatorioParametros);
   Application.Run;
 end.

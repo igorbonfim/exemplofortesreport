@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, uRelatorioLivros,
-  uRelatorioAutorCategoriaEditora, Vcl.ExtCtrls, uRelatorioAgrupado;
+  uRelatorioAutorCategoriaEditora, Vcl.ExtCtrls, uRelatorioAgrupado, Vcl.Mask,
+  RxToolEdit, Vcl.ComCtrls, uRelatorioParametros;
 
 type
   TFrmPrincipal = class(TForm)
@@ -16,11 +17,18 @@ type
     btnRelatorioAgrupado: TButton;
     GroupRelatoriosBasicos: TGroupBox;
     GroupRelatorioAgrupado: TGroupBox;
+    GroupBox1: TGroupBox;
+    lblDataInicial: TLabel;
+    lblDataFinal: TLabel;
+    dtDataInicial: TDateTimePicker;
+    dtDataFinal: TDateTimePicker;
+    btnRelatorioParametros: TButton;
     procedure btnRelLivrosClick(Sender: TObject);
     procedure btnRelAutorClick(Sender: TObject);
     procedure btnRelCategoriaClick(Sender: TObject);
     procedure btnRelEditoraClick(Sender: TObject);
     procedure btnRelatorioAgrupadoClick(Sender: TObject);
+    procedure btnRelatorioParametrosClick(Sender: TObject);
   private
     procedure GerarRelatorio(sTabela: String);
     { Private declarations }
@@ -44,6 +52,22 @@ begin
     FrmRelatorioAgrupado.Relatorio.Preview;
   finally
     FrmRelatorioAgrupado.Free;
+  end;
+end;
+
+procedure TFrmPrincipal.btnRelatorioParametrosClick(Sender: TObject);
+var
+  FrmRelatorioParametros: TFrmRelatorioParametros;
+begin
+  try
+    FrmRelatorioParametros := TFrmRelatorioParametros.Create(nil);
+
+    FrmRelatorioParametros.FDQuery1.ParamByName('DATAINICIAL').AsDate := dtDataInicial.Date;
+    FrmRelatorioParametros.FDQuery1.ParamByName('DATAFINAL').AsDate := dtDataFinal.Date;
+
+    FrmRelatorioParametros.Relatorio.Preview;
+  finally
+    FrmRelatorioParametros.Relatorio.Free;
   end;
 end;
 
